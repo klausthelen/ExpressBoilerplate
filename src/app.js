@@ -1,12 +1,13 @@
 import express from "express";
 import { morganMiddleware } from "./middleware/morgan.js";
-import router from "./router.js";
 import cors from "cors";
-
 import dotenv  from "dotenv";
-dotenv.config()
+
+import router from "./router.js"
 
 const app = express();
+dotenv.config()
+
 app.use(morganMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));

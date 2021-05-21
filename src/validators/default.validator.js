@@ -1,7 +1,13 @@
-import { body } from "express-validator";
+import { body, query, param } from "express-validator";
 
-export default [ 
-    body('table_name')
+export const insertValidator = [ 
+    body('title')
         .exists()
         .isString()
+];
+
+export const getValidator = [ 
+    param('id')
+        .exists()
+        .isNumeric()
 ];

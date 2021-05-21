@@ -1,6 +1,11 @@
-POST http://localhost:3000/emais HTTP/1.1
+POST http://localhost:3000/default/insert HTTP/1.1
 content-type: application/json
 
 {
-    "email": "icystorm@gmail.com"
+    "title": "tabla 1"
 }
+###
+GET http://localhost:3000/default/get HTTP/1.1
+
+###
+GET http://localhost:3000/default/get/10 HTTP/1.1
